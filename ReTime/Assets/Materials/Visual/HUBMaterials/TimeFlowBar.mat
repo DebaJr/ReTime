@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TimeFlowBar
+  m_Shader: {fileID: -6465566751694194690, guid: 0349cca628e7bc145bbed224a74b3e75,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_6C3E3DCE:
+        m_Texture: {fileID: 2800000, guid: 00fff4d5a9991ae43ad48a1b87f2ba93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_B2C9C9A4:
+        m_Texture: {fileID: 2800000, guid: f4a8fcf9a1847f9458738ddb348aac4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_1A60B945: 0.1
+    - Vector1_670F4F08: 0.1
+    - Vector1_A13E1BF1: 0.1
+    m_Colors:
+    - Color_68653A6E: {r: 3.952941, g: 0.1568628, b: 0.1568628, a: 0}
+    - Color_AE28F3E0: {r: 1.333333, g: 0.03137255, b: 2.996078, a: 0}
+    - Color_D7596B90: {r: 4, g: 0.7043927, b: 0, a: 0}
+    - Vector2_1D667A37: {r: 2, g: 1.5, b: 0, a: 0}
+    - Vector2_74CF7F99: {r: 0.1, g: 0, b: 0, a: 0}
+    - Vector2_90292162: {r: 0.1, g: 0, b: 0, a: 0}
+    - Vector2_EBB5894C: {r: -0.1, g: 0, b: 0, a: 0}

@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TimeFlowBarUnlit
+  m_Shader: {fileID: -6465566751694194690, guid: f11ffe8d43764aa4d8d80eb986a804b4,
+    type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_34103C1A:
+        m_Texture: {fileID: 2800000, guid: 77cbfdb6ce53bb749a2ca3b730035289, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_7FA62FC8:
+        m_Texture: {fileID: 2800000, guid: 00fff4d5a9991ae43ad48a1b87f2ba93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_49A31742_Out_0:
+        m_Texture: {fileID: 2800000, guid: 00fff4d5a9991ae43ad48a1b87f2ba93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_8211A1D4_Out_0:
+        m_Texture: {fileID: 2800000, guid: f4a8fcf9a1847f9458738ddb348aac4b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_E16A0532_Out_0:
+        m_Texture: {fileID: 2800000, guid: 00fff4d5a9991ae43ad48a1b87f2ba93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_F0A43D95_Out_0:
+        m_Texture: {fileID: 2800000, guid: 00fff4d5a9991ae43ad48a1b87f2ba93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_4DC8B25C: 2
+    m_Colors:
+    - Color_1D2AE201: {r: 1.8581985, g: 0.79317576, b: 6.5868077, a: 0}
+    - Color_1F5B24EB: {r: 8.041619, g: 1.1367732, b: 3.8808637, a: 0}
+    - Color_4DFAB902: {r: 9.409969, g: 0.2219332, b: 0.2219332, a: 0}
+    - Vector2_786115D0: {r: 20, g: 1.8, b: 0, a: 0}
+    - Vector2_8D5D6B60: {r: 0.1, g: 0, b: 0, a: 0}
+    - Vector2_A9981775: {r: -0.1, g: 0, b: 0, a: 0}
+    - Vector2_CF83E681: {r: 0.1, g: 0, b: 0, a: 0}
