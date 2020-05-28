@@ -38,13 +38,21 @@ public class LevelTimeMeter : MonoBehaviour
         allTimeLostText.SetActive(false);
     }
 
-    //expose LevelEnd functionalities to other scripts
-    public void EndLevel()
+    private void Update()
     {
-        OnLevelEnd();
+        if(Input.GetButton("Cancel"))
+        {
+            Application.Quit();
+        }
     }
 
-    void OnLevelEnd()
+    //expose LevelEnd functionalities to other scripts
+    public void EndLevel(bool died)
+    {
+        OnLevelEnd(died);
+    }
+
+    void OnLevelEnd(bool died)
     {
         levelUIAnimations.SetTrigger(levelUIAnimatorTrigger);
         GameObject player = GameObject.FindGameObjectWithTag(playerTag);
@@ -55,12 +63,12 @@ public class LevelTimeMeter : MonoBehaviour
         player.GetComponent<CharacterRotator>().enabled = false;
         player.GetComponent<CharacterJump>().enabled = false;
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        StartCoroutine(CountCollected(timeCollected, timeSpent));
+        StartCoroutine(CountCollected(timeCollected, timeSpent, died));
         Cursor.visible = true;
     }
 
     //Sum the total time collected on the level with a crescent text
-    IEnumerator CountCollected(int _timeCollected, int _timeSpent)
+    IEnumerator CountCollected(int _timeCollected, int _timeSpent, bool _died)
     {
         int amount = 0;
         timeCollectedText.text = amount.ToString();
@@ -75,11 +83,11 @@ public class LevelTimeMeter : MonoBehaviour
             }
             yield return null;
         }
-        StartCoroutine(CountSpent(_timeCollected, _timeSpent));
+        StartCoroutine(CountSpent(_timeCollected, _timeSpent, _died));
     }
 
     //Sum the total time spent on the level with a crescent text
-    IEnumerator CountSpent(int _timeCollected, int _timeSpent)
+    IEnumerator CountSpent(int _timeCollected, int _timeSpent, bool _died)
     {
         int amount = 0;
         timeSpentText.text = amount.ToString();
@@ -94,11 +102,11 @@ public class LevelTimeMeter : MonoBehaviour
             }
             yield return null;
         }
-        StartCoroutine(SumTotalLevelTime(_timeCollected, _timeSpent));
+        StartCoroutine(SumTotalLevelTime(_timeCollected, _timeSpent, _died));
     }
 
     //Sum the total time of the level with a crescent text
-    IEnumerator SumTotalLevelTime(int _timeCollected, int _timeSpent)
+    IEnumerator SumTotalLevelTime(int _timeCollected, int _timeSpent, bool _died)
     {
         yield return new WaitForSeconds(0.5f);
         //TODO play sound!
@@ -106,7 +114,7 @@ public class LevelTimeMeter : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Tutorial")
         {
             TimeFlow.Time += (_timeCollected - _timeSpent);
-            if(PlayerPrefs.GetInt("LevelsUnlocked") < nextLevelToUnlock)
+            if(PlayerPrefs.GetInt("LevelsUnlocked") < nextLevelToUnlock && !_died)
             {
                 PlayerPrefs.SetInt("LevelsUnlocked", nextLevelToUnlock);
             }

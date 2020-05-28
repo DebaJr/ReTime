@@ -23,6 +23,6 @@ public class Hazard : MonoBehaviour
         timeContainer = FindObjectOfType<ReTimerTimeContainer>();
         timeContainer.TimeCollected = 0;
         levelTimeMeter.SetAllTimeLostTextActive();
-        levelTimeMeter.EndLevel();
+        levelTimeMeter.EndLevel(true);
     }
 }

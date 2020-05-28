@@ -144,7 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f0672a4bc71c04b99b0a03c3591426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 5
+  rotateSpeed: 150
+  rotateSensibility: 0.05
 --- !u!114 &6295499128198358641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ Camera:
   m_GameObject: {fileID: 6295499128807790533}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2

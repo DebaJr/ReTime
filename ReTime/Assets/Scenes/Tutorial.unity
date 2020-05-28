@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: afeb497f848adf74da398bd3223bb0c9,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1602,6 +1602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReTimer
       objectReference: {fileID: 0}
+    - target: {fileID: 6295499128198358652, guid: 89195553a89e4c549aedcdb48bc67597,
+        type: 3}
+      propertyPath: groundCheckerSize.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6295499128198358655, guid: 89195553a89e4c549aedcdb48bc67597,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1655,26 +1660,6 @@ PrefabInstance:
     - target: {fileID: 6295499128198358655, guid: 89195553a89e4c549aedcdb48bc67597,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295499128807790553, guid: 89195553a89e4c549aedcdb48bc67597,
-        type: 3}
-      propertyPath: m_ClearFlags
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295499128807790553, guid: 89195553a89e4c549aedcdb48bc67597,
-        type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295499128807790553, guid: 89195553a89e4c549aedcdb48bc67597,
-        type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6295499128807790553, guid: 89195553a89e4c549aedcdb48bc67597,
-        type: 3}
-      propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2885,6 +2870,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086812455787257169, guid: c88601c8c44de38408c0b322c4e031ac,
+        type: 3}
+      propertyPath: m_text
+      value: drag
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086812455787257169, guid: c88601c8c44de38408c0b322c4e031ac,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086812455787257169, guid: c88601c8c44de38408c0b322c4e031ac,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086812455787257169, guid: c88601c8c44de38408c0b322c4e031ac,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1086812455787257169, guid: c88601c8c44de38408c0b322c4e031ac,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c88601c8c44de38408c0b322c4e031ac, type: 3}

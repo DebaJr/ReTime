@@ -10,7 +10,7 @@ public class CharacterJump : MonoBehaviour
     [Tooltip("Layer for ground checks")][SerializeField] LayerMask groundLayer;
     [Tooltip("Size for the ground checker box")][SerializeField] Vector3 groundCheckerSize;
     bool pressedJump = false;
-    bool isOnGround = true;
+    bool isOnGround, canJump = true;
     float yVelocity;
     Rigidbody reTimerRigidBody;
 
@@ -35,7 +35,9 @@ public class CharacterJump : MonoBehaviour
     private void CaptureJumpInput()
     {
         //Jump Input
-        pressedJump = Input.GetButtonDown("Jump");
+        pressedJump = Input.GetButton("Jump");
+             
+        
         Vector3 groundCheckerCenterPoint = new Vector3 (transform.position.x, transform.position.y - (groundCheckerSize.y * 0.5f), transform.position.z);
         isOnGround = Physics.OverlapBox(groundCheckerCenterPoint, groundCheckerSize, Quaternion.identity, groundLayer).Length > 0;
         
@@ -45,7 +47,7 @@ public class CharacterJump : MonoBehaviour
 
     private void Jump()
     {
-        if(pressedJump && isOnGround)
+        if(pressedJump && isOnGround && reTimerRigidBody.velocity.y < 1f)
         {
             reTimerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             pressedJump = false;

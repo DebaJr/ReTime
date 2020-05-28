@@ -16,7 +16,7 @@ public class TimePortal : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            levelTimeMeter.EndLevel();
+            levelTimeMeter.EndLevel(false);
         }    
     }
 }
