@@ -7,6 +7,7 @@ public class HUBLevel : MonoBehaviour
     [SerializeField] Color hoverColor;
     [Tooltip("Name of level to be loaded when selected")][SerializeField] string levelToLoad;
     [Tooltip("Will cursor be visible in the scene?")] [SerializeField] bool cursorVisible;
+    [Tooltip("Controls lock state of the mouse")] [SerializeField] CursorLockMode cursorLockMode;
     [SerializeField] GameObject playerAvatar;
     Renderer thisHUBLevelRenderer;
     Color startColor;
@@ -32,7 +33,7 @@ public class HUBLevel : MonoBehaviour
 
     private void OnMouseDown()
     {
-        LevelLoadManager.LoadLevel(levelToLoad, cursorVisible);
+        LevelLoadManager.LoadLevel(levelToLoad, cursorVisible, cursorLockMode);
     }
 
 }

@@ -5,7 +5,12 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour
 {
     AudioSource audioSource;
-    
+
+    private void Awake()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     public void StartNewGame()
     {
         PlayerPrefs.SetInt("LevelsUnlocked", 1);

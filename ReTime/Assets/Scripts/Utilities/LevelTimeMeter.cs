@@ -65,6 +65,7 @@ public class LevelTimeMeter : MonoBehaviour
         player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         StartCoroutine(CountCollected(timeCollected, timeSpent, died));
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     //Sum the total time collected on the level with a crescent text

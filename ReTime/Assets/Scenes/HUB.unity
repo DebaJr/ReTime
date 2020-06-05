@@ -267,6 +267,7 @@ MonoBehaviour:
   hoverColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   levelToLoad: Level01
   cursorVisible: 0
+  cursorLockMode: 1
   playerAvatar: {fileID: 1527164797}
 --- !u!65 &191127091
 BoxCollider:
@@ -927,6 +928,7 @@ MonoBehaviour:
   hoverColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0.78431374}
   levelToLoad: EndScene
   cursorVisible: 0
+  cursorLockMode: 1
   playerAvatar: {fileID: 1389472451}
 --- !u!65 &1240249764
 BoxCollider:
@@ -1038,6 +1040,7 @@ MonoBehaviour:
   hoverColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   levelToLoad: Tutorial
   cursorVisible: 1
+  cursorLockMode: 2
   playerAvatar: {fileID: 1926534506}
 --- !u!65 &1380147369
 BoxCollider:
@@ -1161,6 +1164,7 @@ MonoBehaviour:
   hoverColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0.78431374}
   levelToLoad: Level03
   cursorVisible: 0
+  cursorLockMode: 1
   playerAvatar: {fileID: 69598238}
 --- !u!65 &1400157350
 BoxCollider:
@@ -1868,6 +1872,7 @@ MonoBehaviour:
   hoverColor: {r: 1, g: 1, b: 1, a: 0.5882353}
   levelToLoad: Level02
   cursorVisible: 0
+  cursorLockMode: 1
   playerAvatar: {fileID: 1947478463}
 --- !u!65 &1845367715
 BoxCollider:

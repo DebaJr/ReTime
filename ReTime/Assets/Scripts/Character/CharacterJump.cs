@@ -9,6 +9,8 @@ public class CharacterJump : MonoBehaviour
     [Tooltip("Value to be applied as gravity while jumping, to achieve a more gaming jump arc")][SerializeField] float specialGravity = -75f;
     [Tooltip("Layer for ground checks")][SerializeField] LayerMask groundLayer;
     [Tooltip("Size for the ground checker box")][SerializeField] Vector3 groundCheckerSize;
+    [Tooltip("Player jump SFX")][SerializeField] AudioClip jumpSFX;
+    AudioSource audioSource;
     bool pressedJump = false;
     bool isOnGround, canJump = true;
     float yVelocity;
@@ -17,6 +19,7 @@ public class CharacterJump : MonoBehaviour
     void Awake()
     {
         reTimerRigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -49,6 +52,7 @@ public class CharacterJump : MonoBehaviour
     {
         if(pressedJump && isOnGround && reTimerRigidBody.velocity.y < 1f)
         {
+            audioSource.PlayOneShot(jumpSFX);
             reTimerRigidBody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             pressedJump = false;
         }

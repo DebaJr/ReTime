@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 88eb9a04f24f19d4dab331c297b4113d,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2329,6 +2329,11 @@ PrefabInstance:
         type: 3}
       propertyPath: nextLevelToUnlock
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8807202219981464353, guid: 2d8c17c061e7cf4439771acaf7438f9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c17c061e7cf4439771acaf7438f9e, type: 3}
@@ -6135,6 +6140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295499128807790553, guid: 89195553a89e4c549aedcdb48bc67597,
+        type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89195553a89e4c549aedcdb48bc67597, type: 3}

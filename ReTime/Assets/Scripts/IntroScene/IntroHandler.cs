@@ -13,7 +13,7 @@ public class IntroHandler : MonoBehaviour
 
     public void LoadTutorial()
     {
-        LevelLoadManager.LoadLevel("Tutorial", true);
+        LevelLoadManager.LoadLevel("Tutorial", true, CursorLockMode.Confined);
     }
 
     IEnumerator FadeSound()

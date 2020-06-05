@@ -8,7 +8,7 @@ public static class LevelLoadManager
     static public void LoadMenu()
     {
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("Menu");
     }
 
@@ -24,14 +24,16 @@ public static class LevelLoadManager
         SceneManager.LoadScene("HUB");
     }
 
-    static public void LoadLevel(int _levelToBeLoadedIndex, bool cursorVisible)
+    static public void LoadLevel(int _levelToBeLoadedIndex, bool cursorVisible, CursorLockMode cursorLockMode)
     {
+        Cursor.lockState = cursorLockMode;
         Cursor.visible = cursorVisible;
         SceneManager.LoadScene(_levelToBeLoadedIndex);
     }
 
-    static public void LoadLevel(string _levelToBeLoadedIndex, bool cursorVisible)
+    static public void LoadLevel(string _levelToBeLoadedIndex, bool cursorVisible, CursorLockMode cursorLockMode)
     {
+        Cursor.lockState = cursorLockMode;
         Cursor.visible = cursorVisible;
         SceneManager.LoadScene(_levelToBeLoadedIndex);
     }

@@ -8,7 +8,7 @@ public class CharacterRotator : MonoBehaviour
     [Tooltip("Minimun difference between frames of the mouse or stick position to rotate the camera")][SerializeField] float rotateSensibility = 0.05f;
     float xMove, lastMovePos;
 
-    float lastAngle = 0f;
+    float angle = 0f;
 
     void Update()
     {
@@ -30,6 +30,7 @@ public class CharacterRotator : MonoBehaviour
         else if (Input.GetAxis("RightStick") != lastMovePos)
         {
             xMove = Input.GetAxis("RightStick");
+            lastMovePos = xMove;
         }
         else
         {
@@ -39,7 +40,7 @@ public class CharacterRotator : MonoBehaviour
 
     private void Rotate()
     {
-        lastAngle += xMove * rotateSpeed * Time.fixedDeltaTime;
-        transform.eulerAngles = new Vector3 (0f, lastAngle, 0f);
+        angle = xMove * rotateSpeed * Time.fixedDeltaTime;
+        transform.Rotate(Vector3.up, angle);
     }
 }

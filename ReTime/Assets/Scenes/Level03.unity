@@ -2926,6 +2926,11 @@ PrefabInstance:
       propertyPath: timeToOpenPortal
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 8807202219981464353, guid: 2d8c17c061e7cf4439771acaf7438f9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d8c17c061e7cf4439771acaf7438f9e, type: 3}
 --- !u!114 &491660091 stripped
